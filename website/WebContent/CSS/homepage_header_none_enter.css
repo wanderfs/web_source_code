@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+ #header{
+	padding:0px 20px 0px 20px;
+	*width:940px;
+	position: relative;
+
+}
+
+#header h1{padding:0 20px 0 0;color:#3e3e3e;font:36px arial,sans-serif;font-weight:bold;line-height:36px;}
+#header #intro{
+	position:relative;
+	margin-top:10px;
+	font:bold 18px/30px arial,sans-serif;
+	color:#969696;
+	background:url("../pic/phome_summary_bg.gif") repeat scroll 0 -1px transparent;
+}
+#header #intro a{font-family:arial,sans-serif;color:#447aa4;}#header #intro a:hover{color:#f75342 }

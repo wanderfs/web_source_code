@@ -1,0 +1,27 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}ol,ul {list-style:none;}caption,th {text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym {border:0;}body{background:#86C9ef;}a,input,textarea,select{outline:0 none;}.hourglass img,.hourglass a,.hourglass li,.hourglass div,.hourglass{cursor:progress !important;}#planet{position:absolute;bottom:0;left:0;width:100%;}#planet img{display:block;}#logo{position:absolute;top:4%;left:3%;z-index:10;}#control{position:absolute;top:5%;right:5%;}#form{position:absolute;right:0;z-index:2;}#form div.rounded_input{
+	margin-bottom:10px;
+	width:232px;
+	height:38px;
+	background:url('../pic/world_input.gif') no-repeat top left;
+}#form div.rounded_input input{display:block;padding:10px 10px 10px 10px;width:212px;height:18px;font:14px arial,sans-serif;color:#445135;border:0;background:transparent;}#form div.label{
+	padding:0 0 6px 5px;
+	width:227px;
+	font:12px verdana,sans-serif;
+	color:#445135;
+}#form div.label span.tos{
+	float:right;
+	display:block;
+	margin-bottom:10px;
+	width:204px;
+	font:normal 12px verdana,sans-serif;
+}#form div.label span.tos a{color:#106589;text-decoration:none;border-bottom:1px dotted #4095b9;}#form div.label span.tos a:hover{color:#fff;border-bottom:1px dotted #fff;}#form .button{
+	float:left;
+	margin:0 10px 0 5px;
+	padding:2px 15px;
+	font:12px verdana,sans-serif;
+	color:#fff;
+	vertical-align:top;
+	cursor:pointer;
+	border:1px solid #408bb6;
+	background:#59a5d1;
+}#flagpole{position:absolute;top:-5px;right:252px;width:150px;text-align:right;}#flagpole #fbconnect{margin-top:17px;font:normal 10px/12px verdana,sans-serif;color:#106589;text-align:right;}#title{font:normal 28px/28px arial,sans-serif;color:#2e3540;}#ordothis{font:normal 12px/20px verdana,sans-serif;color:#4095b9;}#ordothis a{padding-bottom:1px;color:#106589;text-decoration:none;border-bottom:1px dotted #4095b9;}#ordothis a:hover{color:#fff;border-bottom:1px dotted #fff;}div.forgot{float:left;padding:0;width:130px;line-height:16px;padding-top:3px;}div.forgot a{line-height:0;font:normal 11px verdana,sans-serif;color:#106589;text-decoration:none;border-bottom:1px dotted #4095b9;}div.forgot a:hover{color:#fff;border-bottom:1px dotted #fff;}#message{padding:5px 0;font:bold 10px verdana,sans-serif;color:#fff;text-align:center;border-bottom:1px solid #90deff;background:#e2451c;}#message a{color:#fff;text-decoration:none;border-bottom:1px dotted #fff;}

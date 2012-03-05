@@ -1,0 +1,3 @@
+-- listing properties --
+DATABASE_ACCESS_LOG=log/database_log.txt
+DATABASE_PATH=jdbc/mysql/main

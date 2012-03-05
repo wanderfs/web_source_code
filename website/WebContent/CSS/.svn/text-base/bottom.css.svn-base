@@ -1,0 +1,8 @@
+#main #bottom{
+	font:normal 10px/10px verdana,serif;
+	color:#969696;
+	text-align:center;
+	padding:20px 0px 10px 75px;
+	
+}
+#main #bottom div.legal_container{float: left;}

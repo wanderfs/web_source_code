@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* for help banner only */
+.obiwan {
+    margin: 10px 10px 10px;
+    padding: 10px;
+    padding: 10px 0px;
+    position: relative;
+    -webkit-border-radius: 10px;
+}
+
+.obiwan .nipple {
+    border-color: -moz-use-text-color #FFFFFF #F2F5C3;
+    border-style: none solid solid;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-width: 0 11px 11px;
+    _border:0px none;
+    left: 20px;
+    position: absolute;
+    top: -11px;
+    color: #F2F5C3;
+}
+
+.obiwan .myonlyhope {
+    color: #7C7C7C;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 10px;
+    position: relative;
+}
+
+.obiwan .subscription, .obiwan .channel, .obiwan .comment, .obiwan .album, .obiwan .contact, .obiwan .like, .obiwan .share, .obiwan .tag, .obiwan .upload, .obiwan .vimeo {
+    padding-left: 80px;
+    width: 460px;
+}
+
+.obiwan .vimeo {
+    background: url("../pic/icon_helpbox_iweishi.gif") no-repeat scroll 10px 50% transparent;
+}
+
+.obiwan .myonlyhope .title {
+    color: #555555;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.obiwan .myonlyhope .undertaker {
+    color: #7A7A60;
+    position: absolute;
+    right: 12px;
+    top: -3px;
+}
+
+.undertaker {
+    cursor: pointer;
+    font: bold 14px verdana,sans-serif;
+}

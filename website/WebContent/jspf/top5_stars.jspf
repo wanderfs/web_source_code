@@ -1,0 +1,136 @@
+<%@page pageEncoding="UTF-8" %>
+
+<div class="nippleBox organicFritos">
+    <div class="bar">
+        <h4>本周发现家</h4>	</div>
+    <div class="nipple"></div>
+    <div class="content" >
+        <div id="top_week_videos">
+            <ul class="top_week_videos_ul">
+                <%
+                            // TODO(sen): change this to ...CollectUser!
+                            List<Pair<IUser, Integer>> topUsers = Global.getTopRecentSubmitUser(7 * 24 * 3600 * 1000, 5);
+                            Iterator<Pair<IUser, Integer>> topuit = topUsers.iterator();
+                            int topUserIdx = 0;
+                                                            while (topuit.hasNext()) {
+                                                                if (++topUserIdx == 1) {%>
+                <li class="top_week_videos_li top_week_videos_topvideo">
+                    <%} else {%>
+                <li class="top_week_videos_li">
+                    <%}
+                                                                        Pair<IUser, Integer> pair = topuit.next();
+                                                                        IUser topUser = pair.getKey();
+                    %>
+
+                    <div class="top_week_videos_num"><%=topUserIdx%></div>
+                    <a href="home.jsp?uid=<%=topUser.getUserid()%>" class="top_week_videos_thumbnail" style="background-image:url('<%=topUser.getPhotoSmall()%>');" >
+                    </a>
+                    <div class="top_week_videos_digest">
+                        <h3><a href="home.jsp?uid=<%=topUser.getUserid()%>"><%=topUser.getName()%></a></h3>
+                        <div class="top_week_videos_stat"><strong><a href="#nogo"><%=pair.getValue()%></a></strong>
+                            个发现视频 /
+                            <strong><a href="#nogo"><%=topUser.getFollower().size()%></a></strong>
+                            位粉丝</div>
+                    </div>
+
+                    <div class="clear"></div>
+                </li>
+                <%}%>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="nippleBox pickleTickle">
+    <div class="bar">
+        <h4>专辑编辑</h4>
+    </div>
+    <div class="nipple"></div>
+    <div class="content" >
+        <div id="top_week_videos">
+            <ul class="top_week_videos_ul">
+                <li class="top_week_videos_li top_week_videos_topvideo">
+                    <div class="top_week_videos_num">1</div>
+                    <%
+                    IUser topUser = EntityFactory.getUser(31);
+                    %>
+                    <a href="home.jsp?uid=<%=topUser.getUserid()%>" class="top_week_videos_thumbnail" style="background-image:url('<%=topUser.getPhotoSmall()%>');" >
+                    </a>
+                    <div class="top_week_videos_digest">
+                        <h3><a href="home.jsp?uid=<%=topUser.getUserid()%>"><%=topUser.getName()%></a></h3>
+                        <div class="top_week_videos_stat">
+                            <strong><a href="#nogo"><%=topUser.getFollower().size()%></a></strong>
+                            位粉丝</div>
+                    </div>
+
+                    <div class="clear"></div>
+                </li>
+                <li class="top_week_videos_li">
+                    <div class="top_week_videos_num">2</div>
+                    <%
+                        topUser = EntityFactory.getUser(19);
+                    %>
+                    <a href="home.jsp?uid=<%=topUser.getUserid()%>" class="top_week_videos_thumbnail" style="background-image:url('<%=topUser.getPhotoSmall()%>');" >
+                    </a>
+                    <div class="top_week_videos_digest">
+                        <h3><a href="home.jsp?uid=<%=topUser.getUserid()%>"><%=topUser.getName()%></a></h3>
+                        <div class="top_week_videos_stat">
+                            <strong><a href="#nogo"><%=topUser.getFollower().size()%></a></strong>
+                            位粉丝</div>
+                    </div>
+
+                    <div class="clear"></div>
+                </li>
+                <li class="top_week_videos_li">
+                    <div class="top_week_videos_num">3</div>
+                    <%
+                        topUser = EntityFactory.getUser(1498);
+                    %>
+                    <a href="home.jsp?uid=<%=topUser.getUserid()%>" class="top_week_videos_thumbnail" style="background-image:url('<%=topUser.getPhotoSmall()%>');" >
+                    </a>
+                    <div class="top_week_videos_digest">
+                        <h3><a href="home.jsp?uid=<%=topUser.getUserid()%>"><%=topUser.getName()%></a></h3>
+                        <div class="top_week_videos_stat">
+                            <strong><a href="#nogo"><%=topUser.getFollower().size()%></a></strong>
+                            位粉丝</div>
+                    </div>
+
+                    <div class="clear"></div>
+                </li>
+                <li class="top_week_videos_li">
+                    <div class="top_week_videos_num">4</div>
+                    <%
+                        topUser = EntityFactory.getUser(35);
+                    %>
+                    <a href="home.jsp?uid=<%=topUser.getUserid()%>" class="top_week_videos_thumbnail" style="background-image:url('<%=topUser.getPhotoSmall()%>');" >
+                    </a>
+                    <div class="top_week_videos_digest">
+                        <h3><a href="home.jsp?uid=<%=topUser.getUserid()%>"><%=topUser.getName()%></a></h3>
+                        <div class="top_week_videos_stat">
+                            <strong><a href="#nogo"><%=topUser.getFollower().size()%></a></strong>
+                            位粉丝</div>
+                    </div>
+
+                    <div class="clear"></div>
+                </li>
+                <li class="top_week_videos_li">
+                    <div class="top_week_videos_num">5</div>
+                    <%
+                        topUser = EntityFactory.getUser(1470);
+                    %>
+                    <a href="home.jsp?uid=<%=topUser.getUserid()%>" class="top_week_videos_thumbnail" style="background-image:url('<%=topUser.getPhotoSmall()%>');" >
+                    </a>
+                    <div class="top_week_videos_digest">
+                        <h3><a href="home.jsp?uid=<%=topUser.getUserid()%>"><%=topUser.getName()%></a></h3>
+                        <div class="top_week_videos_stat">
+                            <strong><a href="#nogo"><%=topUser.getFollower().size()%></a></strong>
+                            位粉丝</div>
+                    </div>
+
+                    <div class="clear"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

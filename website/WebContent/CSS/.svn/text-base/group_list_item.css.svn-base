@@ -1,0 +1,61 @@
+@charset "utf-8";
+/* CSS Document */
+.detail_format .row{
+	margin: 20px 20px 0px 20px;
+}
+.row{
+}
+.row .last{margin-right:0;}
+.row .item{
+	float: left;
+}
+.channel_thumb{float: left;line-height:0;position: relative;}
+.detail_format .thumbnail{width:160px;height:120px;}
+.channel_thumb .group_icon{
+	width:25px;
+	height:25px;
+	position:absolute;
+	bottom:5px;*bottom:4px;
+	right:30px;*right:0px;
+}
+.detail_format .detail{
+	float: left;
+	width: 370px;
+	margin-left: 10px;
+}.detail_format .item .title{
+	font-size:18px;
+	margin:0;
+}.detail_format .date{margin-bottom:3px;font: normal 11px verdana,sans-serif;color:#969696;}.detail_format .date .updated{
+	font: normal 12px verdana,sans-serif;
+}.detail_format .description{margin-bottom:5px;overflow: hidden;}.detail_format .categories{margin-bottom:7px;overflow: hidden;}.detail_format .stats{margin-left:10px;}.detail_format .info{padding-top:5px;color:#969696;}.detail_format .credits .credit{width:146px;}.detail_format .credit .user{width:106px;}.detail_format .related{font: normal 11px verdana,sans-serif;margin-top:10px;clear:both;}.detail_format .related .groups,.detail_format .related .channels,.detail_format .related .albums{margin:0 0 5px 0;}.detail_format .related h5{font:bold 14px arial,sans-serif;margin:0;}.detail_format .related .groups,.detail_format .related .channels,.detail_format .related .albums{display:block;float: left;width:137px;margin:0 10px 0 0;}.detail_format .related .albums{margin-right:0;}
+.item .title{font:bold 14px arial,sans-serif;margin-top:4px;width:200px;overflow: hidden;}.item .title .pending_vid_msg{font:bold 10px/10px verdana,sans-serif;}.item .title .undertaker{display:block;float: right;margin:0 0 5px 5px;}.item .date{
+	color:#969696;
+	font: normal 12px verdana,serif;
+}.item .description span{color:#969696;}
+.date{font-size:11px;}.credits .credit{float: left;width:150px;margin-bottom:5px;}.credit .portrait{float: left;}.portrait{cursor:pointer;}
+.credit .user{float: left;margin-left:5px;overflow: hidden;width:110px;}.credit .user a{font:bold 12px verdana,serif;}.credit .user span{
+	display:block;
+	font: normal 12px verdana,serif;
+	color:#969696
+}
+.join_group {
+	float: right;
+	height: 30px;
+	width: 100px;
+	background-color: rgb(128,206,255);
+	-moz-border-radius: 8px;
+	color: #FFF;
+	font-size: 18px;
+}
+.join_group img {
+	margin-left: 10px;
+	margin-right: 10px;
+	display: block;
+	float: left;
+}
+.join_group strong {
+	display: block;
+	line-height: 30px;
+
+
+}

@@ -1,0 +1,18 @@
+
+#main #footer{
+	padding:522px 0 10px 75px;
+
+
+
+
+
+
+
+ *padding:522px 0 10px 35px;
+	font:normal 12px/12px verdana,serif;
+	color:#969696;
+	text-align:center;
+	background: no-repeat bottom center;
+	background-image: url(../pic/land_center.png);
+}
+#main #footer div.legal_container{float: left;}

@@ -1,0 +1,18 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package logic.update;
+
+import java.util.TimerTask;
+
+/**
+ *
+ * @author xuan
+ */
+public abstract class Updater extends TimerTask {
+    public int getUpdateInterval(){return 0;};
+    @Override
+    public void run() {};
+}

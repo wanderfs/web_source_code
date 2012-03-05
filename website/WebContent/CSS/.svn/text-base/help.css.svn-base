@@ -1,0 +1,44 @@
+.block .inner{
+    margin: 0 0 30px;
+}
+.block .inner h4 {
+    background: url("../pic/help/help_ps_24.png") no-repeat scroll top left transparent;
+    padding: 2px 0 8px 35px;
+    _padding: 2px 0 2px 35px;
+    font: bold 18px/18px arial,sans-serif;
+    margin: 10px 0 0 10px;
+}
+.block .inner img {
+    background: none repeat scroll 0 0 #F7F8F3;
+    margin:10px 0 10px 50px;
+}
+.block .inner p {
+    background: none repeat scroll 0 0 #F7F8F3;
+    border-top: 1px dotted #EDE9E9;
+    padding: 5px;
+    margin:0 0 0 40px;
+    font-size: 12px;
+    line-height: 16px;
+}
+.block .inner div .help_small_title {
+    font: bold 15px/15px arial,sans-serif;
+    margin: 5px 0 5px 40px;
+}
+
+.block h2 {
+    font: bold 24px arial,sans-serif;
+    margin: 0 0 10px;
+}
+
+.block h2.help_one {
+    background: url("../pic/help/help_num_1.gif") no-repeat scroll left center transparent;
+    padding: 0 0 0 32px;
+}
+.block h2.help_two {
+    background: url(../pic/help/help_num_2.gif) no-repeat scroll left center transparent;
+    padding: 0 0 0 32px;
+}
+.block h2.help_three {
+    background: url(../pic/help/help_num_3.gif) no-repeat scroll left center transparent;
+    padding: 0 0 0 32px;
+}

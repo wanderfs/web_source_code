@@ -1,0 +1,14 @@
+﻿<%@page pageEncoding="UTF-8" %> 
+<div id="dCreateAlbumPopup" class="dCreateAlbumPopup">
+    <div id="create_album_content">
+    <h1><span>新建专辑</span><img src="pic/icon_act_album.gif" alt="新建专辑"/></h1>
+    <form id="fCreateAlbum" class="fCreateAlbum" action="createAlbum">
+        <h3 id="create_album_name">专辑名称:</h3>
+        <input id="iNewAlbumName" class="iNewAlbumName" type="text"/>
+        <h3 id="create_album_descrip">专辑描述:</h3>
+        <input id="iNewAlbumDescription" class="iNewAlbumDescription" type="text"/>
+        <input id="iCreateAlbumBtn" class="iCreateAlbumBtn blue_button" type="button" value="新建"/>
+        <div class="clear"></div>
+    </form>
+    </div>    
+</div>

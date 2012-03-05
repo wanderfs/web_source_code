@@ -1,0 +1,57 @@
+<%@page pageEncoding="UTF-8" %>
+<div  id="ignite_around"  >
+
+    <div class="ignite">
+        <h1>点亮人人帐户<img src="pic/logo-renren-30.png" /></h1>
+
+        <h3>请点击&nbsp;&nbsp; </h3>
+        <xn:login-button autologoutlink="true"></xn:login-button></div>
+    <div id="contact_list" class="ignite">
+        <h3>你有这些人人好友在爱微视上</h3>
+        <div class="profile_contacts">
+
+            <ul>
+                <li>
+                    <a class="outside_site" href="#nogo">
+                        <img src="pic/portrait/d.48.png"/>
+                        <span>站外ID</span>
+                        
+                    </a>
+                    <div class="ignite_equal">||</div>
+                    <a  class="inside_site" href="#nogo">
+                        <img src="pic/portrait/d.48.png"/>
+                        <input type="checkbox" class="contact_checkbox" checked="true" name="user_id"  />
+                        <span>&nbsp;爱微视ID</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="clear"></div>
+
+            <div class="push_frame_buttons">
+
+
+                <div class="toolbar_item" id="contact_switch">
+                    <a href="#nogo" id="follow_contacts">
+                        <div class="toolbar_image " id="toolbar_smiley"></div>
+			关注TA们
+                    </a>
+                </div>
+                <div > <input id="disfollow_all"type="checkbox" /><label id="remember_label" class="disfollowAllLabel" for="disfollow_all">&nbsp;&nbsp;取消全部</label></div>
+                <div class="push_infback">
+                    <span class="push_infback_text"><span id="contact_statusbar">点击关注选中的朋友们</span><img src="pic/icon_act_tag.gif" height="30px" width="30px" /></span>
+                </div>
+
+                <div class="clear"></div>
+            </div>
+        </div></div>
+
+    <div id="popup_gmail" class="ignite">
+        <form method="post" id="gmail_ignite_form" action="ignite">
+            <input type="hidden" name="which" value="gmail"/>
+            <h1>点亮Gmail帐户<img src="pic/gmail30.png" /></h1>
+            <h3>邮箱</h3><input type="text" name="gmail" id="gmail_input_email"/>
+            <h3>密码</h3><input type="password" name="gpasswd" id="gmail_input_passwd"/>
+            <input class="ignite_ok_btn blue_button" value="点亮"  type="submit"/>
+        </form>
+    </div>
+</div>

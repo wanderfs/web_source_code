@@ -1,0 +1,73 @@
+<%@page pageEncoding="UTF-8" %>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    var PUSH_TIPS = "试试填入视频网址！ 如:http://v.youku.com/v_show/id_XMjM2MDg3MTAw.html\n内测阶段开放支持的网站有：优酷，土豆，CNTV，酷6，我乐，六间房，新浪视频...";  // the tips we started with
+    $("#push_video_textarea").text(PUSH_TIPS);
+    // auto clear when clicked.
+    $("#push_video_textarea").click(function(e){
+        if ($(this).val() == PUSH_TIPS) {
+            $(this).val("");
+        }
+    });
+});
+</script>
+
+<div id="push_video">
+    <form id="push_video_form" action="" method="post" >
+        <textarea name="push_video_textarea" cols="" rows="3" id="push_video_textarea" ></textarea>
+        <a id="show_push_frame" href="#nogo"><input id="push_video_btn" type="button" value="" /></a>
+    </form>
+</div>
+
+<div class="mask">
+    <div id="push_frame_mask" >
+        <div id="push_frame_loading" class="push_loading">加载中...</div>
+        <div id="push_frame_error" class="push_infback_text">对不起，您提供的视频链接不正确.<br/><br/>目前仅开放支持优酷，土豆，CNTV，酷6，我乐，六间房，新浪视频...<br/><button class="closebtn" >关闭</button><div class="clear"></div></div>
+
+        <div id="push_frame_success" class="pushbtn_frame">
+            <div class="pushbtn_frame_wrapper" >
+                <div class="pushbtn_frame_meat">
+                    <div class="pushbtn_frame_content">
+                        <div class="thumbnail"><a href="#nogo">&nbsp;</a></div>
+                        <div class="digest">
+                            <h3><a href="#nogo">视频标题</a></h3>
+                            <div class="byline">发现者<a href="home.jsp">张三李四</a>
+                            </div>
+                            <div class="description"><textarea class="pushbtn_usertalk" id="pushbtn_usertalk" cols="" rows="" ></textarea></div>
+                        </div>
+
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="push_frame_buttons" >
+                        <div id="push_frame_ok" class="share_video_btn">
+                            <!--[if gte IE 6]>   <div class="share_video_btn_top"><div class="share_video_btn_tl"></div><div class="share_video_btn_tr"></div><div class="share_video_btn_tm"></div></div><![endif]-->
+                            <div class="share_video_btn_mid">
+                                <strong id="pushbtn_text">收藏</strong></div>
+                            <!--[if gte IE 6]><div class="share_video_btn_bottom"><div class="share_video_btn_bl"></div><div class="share_video_btn_br"></div><div class="share_video_btn_bm"></div></div><![endif]-->
+                            <div class="dAlbumItems confirm_ai mask">
+                                <ul class="uAlbumItems">
+                                    <%
+                                         List clist = user.getJoinedChannel(WebpageLayoutParam.NUM_TOPLIMIT_ALBUMS);
+                                         Iterator<JoinChannelEvent> cit = clist.iterator();
+                                         int cid_push_frame = 0;
+                                         while (cit.hasNext()) {
+                                             cid_push_frame = cit.next().getGroupid();
+                                    %>                          
+                        <li id ='<%= "cid" + cid_push_frame %>'class="album_name"><a href="#nogo"><%= EntityFactory.getGroup(cid_push_frame).getName()%></a></li>
+                        <% }%>
+                                    <li class="create_album">新建专辑</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="push_infback" >
+                            <span  class="push_infback_text"><span id="info_text">您将是第<strong>&nbsp;1&nbsp;</strong>位收藏此视频的人，视频的发现者</span></span>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

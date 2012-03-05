@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+.group_list_next {
+	margin:20px;
+	*margin:0px 20px 20px 20px;
+	height:33px;
+	text-align: center;
+	background-color: #59A5D1;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #408BB6;
+	border-right-color: #408BB6;
+	border-bottom-color: #408BB6;
+	border-left-color: #408BB6;
+	color: #fff;
+	vertical-align: middle;
+	line-height: 33px;
+	border-width:1px;
+}
+
+#create_a_group_container{
+	-moz-border-radius:8px;
+	margin:0 0 20px 0;
+	height: 35px;
+	background-image: url(../pic/create_group_button.png);
+	width: 187px;
+	color: #FFF;
+	font-size: 18px;
+	text-align: center;
+	line-height: 35px;
+	vertical-align: middle;
+}
+.instruction{margin-bottom:20px;font-size:11px;}
+.nippleBox{margin:0 0 20px 0;}
+div.nippleBox.manateeCloud div.bar{background-color:#90d5ec;}div.nippleBox.manateeCloud div.nipple{border-top-color:#90d5ec;}
+.instruction .content{
+	background:#d1eef7;
+	font-size:12px;
+	padding:10px 10px 10px 10px;
+	line-height:16px;
+*margin-top: -2px;}.instruction .content p{margin-bottom:10px;}.instruction .content p.last{margin:0;}.instruction .half_left{float: left;width:125px;padding:0 10px 0 0;}.instruction .half_right{float: left;width:125px;padding:0 0 0 10px;border-left:1px dotted #fff;}.half_left img.icon,.half_right img.icon{float: right;}.instruction ul.disc{margin:10px 0 10px 15px;}.instruction ul.disc li{list-style:disc;margin:0 0 5px 0;}.instruction ul.smtxt li{font: normal 10px/14px verdana,sans-serif;}.instruction .insides_box{background:#f6f6f6;font: normal 10px verdana,sans-serif;margin:10px 0;padding:10px;border:1px dotted #90d5ec;}.instruction .url{color:#2786c2;border-bottom:1px dotted #91aeb7;}.instruction img.insert{float: right;margin:0 0 10px 10px;}

@@ -1,0 +1,349 @@
+-- MySQL dump 10.13  Distrib 5.1.37, for debian-linux-gnu (i486)
+--
+-- Host: localhost    Database: main
+-- ------------------------------------------------------
+-- Server version	5.1.37-1ubuntu5.1
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `follow`
+--
+
+DROP TABLE IF EXISTS `follow`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `follow` (
+  `followeeid` int(11) NOT NULL,
+  `followerid` int(11) NOT NULL,
+  `time` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  KEY `fk_follow_1` (`followeeid`),
+  KEY `fk_follow_2` (`followerid`),
+  CONSTRAINT `fk_follow_1` FOREIGN KEY (`followeeid`) REFERENCES `user` (`userid`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `fk_follow_2` FOREIGN KEY (`followerid`) REFERENCES `user` (`userid`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `follow`
+--
+
+LOCK TABLES `follow` WRITE;
+/*!40000 ALTER TABLE `follow` DISABLE KEYS */;
+INSERT INTO `follow` VALUES (3,3,'2010-02-15 01:23:21');
+/*!40000 ALTER TABLE `follow` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `ingroup`
+--
+
+DROP TABLE IF EXISTS `ingroup`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ingroup` (
+  `groupid` int(11) NOT NULL DEFAULT '0',
+  `userid` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`groupid`,`userid`),
+  KEY `FK_ingroup_user_userid` (`userid`),
+  KEY `UK_ingroup_groupid` (`groupid`),
+  CONSTRAINT `FK_ingroup_group_groupid` FOREIGN KEY (`groupid`) REFERENCES `usergroup` (`groupid`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FK_ingroup_user_userid` FOREIGN KEY (`userid`) REFERENCES `user` (`userid`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ingroup`
+--
+
+LOCK TABLES `ingroup` WRITE;
+/*!40000 ALTER TABLE `ingroup` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ingroup` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `post`
+--
+
+DROP TABLE IF EXISTS `post`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `post` (
+  `groupid` int(11) NOT NULL DEFAULT '0',
+  `userid` int(11) NOT NULL DEFAULT '0',
+  `videoid` int(11) NOT NULL DEFAULT '0',
+  `time` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`groupid`,`userid`,`videoid`),
+  KEY `FK_post_user_userid` (`userid`),
+  KEY `FK_post_video_videoid` (`videoid`),
+  KEY `fk_post_group_groupid` (`groupid`),
+  CONSTRAINT `FK_post_group_groupid` FOREIGN KEY (`groupid`) REFERENCES `usergroup` (`groupid`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FK_post_user_userid` FOREIGN KEY (`userid`) REFERENCES `user` (`userid`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FK_post_video_videoid` FOREIGN KEY (`videoid`) REFERENCES `video` (`videoid`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `post`
+--
+
+LOCK TABLES `post` WRITE;
+/*!40000 ALTER TABLE `post` DISABLE KEYS */;
+/*!40000 ALTER TABLE `post` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `rate`
+--
+
+DROP TABLE IF EXISTS `rate`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `rate` (
+  `userid` int(11) NOT NULL DEFAULT '0',
+  `videoid` int(11) NOT NULL DEFAULT '0',
+  `time` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `score` float DEFAULT NULL,
+  PRIMARY KEY (`userid`,`videoid`),
+  KEY `FK_suggest_video_videoid` (`videoid`),
+  KEY `UK_suggest_userid` (`userid`),
+  CONSTRAINT `FK_suggest_user_userid` FOREIGN KEY (`userid`) REFERENCES `user` (`userid`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FK_suggest_video_videoid` FOREIGN KEY (`videoid`) REFERENCES `video` (`videoid`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `rate`
+--
+
+LOCK TABLES `rate` WRITE;
+/*!40000 ALTER TABLE `rate` DISABLE KEYS */;
+/*!40000 ALTER TABLE `rate` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `submit`
+--
+
+DROP TABLE IF EXISTS `submit`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `submit` (
+  `userid` int(11) NOT NULL DEFAULT '0',
+  `videoid` int(11) NOT NULL DEFAULT '0',
+  `time` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `comments` varchar(1000) DEFAULT NULL,
+  PRIMARY KEY (`videoid`,`userid`),
+  KEY `FK_submit_user_userid` (`userid`),
+  KEY `UK_submit_videoid` (`videoid`),
+  CONSTRAINT `FK_submit_user_userid` FOREIGN KEY (`userid`) REFERENCES `user` (`userid`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FK_submit_video_videoid` FOREIGN KEY (`videoid`) REFERENCES `video` (`videoid`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `submit`
+--
+
+LOCK TABLES `submit` WRITE;
+/*!40000 ALTER TABLE `submit` DISABLE KEYS */;
+/*!40000 ALTER TABLE `submit` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `user`
+--
+
+DROP TABLE IF EXISTS `user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `user` (
+  `userid` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(255) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `jointime` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `password` varchar(255) DEFAULT NULL,
+  `description` varchar(1000) DEFAULT NULL,
+  `photo` blob,
+  PRIMARY KEY (`userid`),
+  UNIQUE KEY `userid` (`userid`),
+  KEY `email` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user`
+--
+
+LOCK TABLES `user` WRITE;
+/*!40000 ALTER TABLE `user` DISABLE KEYS */;
+INSERT INTO `user` VALUES (3,'xuan.zhang@yale.edu','张旋','2010-02-14 19:22:27','就不告诉你',NULL,NULL);
+/*!40000 ALTER TABLE `user` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `usergroup`
+--
+
+DROP TABLE IF EXISTS `usergroup`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `usergroup` (
+  `groupid` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `description` varchar(1000) DEFAULT NULL,
+  `time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `photo` blob,
+  `administratorid` int(11) DEFAULT NULL,
+  PRIMARY KEY (`groupid`),
+  UNIQUE KEY `UK_group_groupid` (`groupid`),
+  UNIQUE KEY `name` (`name`),
+  KEY `fk_usergroup_1` (`administratorid`),
+  CONSTRAINT `fk_usergroup_1` FOREIGN KEY (`administratorid`) REFERENCES `user` (`userid`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `usergroup`
+--
+
+LOCK TABLES `usergroup` WRITE;
+/*!40000 ALTER TABLE `usergroup` DISABLE KEYS */;
+/*!40000 ALTER TABLE `usergroup` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `video`
+--
+
+DROP TABLE IF EXISTS `video`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `video` (
+  `videoid` int(11) NOT NULL AUTO_INCREMENT,
+  `siteSpecificID` varchar(255) NOT NULL,
+  `residentSite` varchar(255) DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `snapsotURL` varchar(255) DEFAULT NULL,
+  `summary` varchar(1000) DEFAULT NULL,
+  PRIMARY KEY (`videoid`),
+  UNIQUE KEY `videoid` (`videoid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `video`
+--
+
+LOCK TABLES `video` WRITE;
+/*!40000 ALTER TABLE `video` DISABLE KEYS */;
+/*!40000 ALTER TABLE `video` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `videocomments`
+--
+
+DROP TABLE IF EXISTS `videocomments`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `videocomments` (
+  `videocommentid` int(11) NOT NULL,
+  `videoid` int(11) NOT NULL,
+  `comment` varchar(512) DEFAULT NULL,
+  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `userid` int(11) DEFAULT NULL,
+  `parentid` int(11) DEFAULT '-1',
+  PRIMARY KEY (`videocommentid`),
+  KEY `fk_videocomments_1` (`videoid`),
+  KEY `fk_videocomments_2` (`userid`),
+  KEY `fk_videocomments_3` (`videocommentid`),
+  CONSTRAINT `fk_videocomments_3` FOREIGN KEY (`videocommentid`) REFERENCES `videocomments` (`videoid`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_videocomments_1` FOREIGN KEY (`videoid`) REFERENCES `video` (`videoid`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `fk_videocomments_2` FOREIGN KEY (`userid`) REFERENCES `user` (`userid`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `videocomments`
+--
+
+LOCK TABLES `videocomments` WRITE;
+/*!40000 ALTER TABLE `videocomments` DISABLE KEYS */;
+/*!40000 ALTER TABLE `videocomments` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `videorelated`
+--
+
+DROP TABLE IF EXISTS `videorelated`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `videorelated` (
+  `currentvideoid` int(11) NOT NULL,
+  `relatedvideoid` int(11) DEFAULT NULL,
+  `weight` float DEFAULT '1',
+  KEY `FK_videorelated_currentvideo_video_videoid` (`currentvideoid`),
+  KEY `FK_videorelated_relatedvideo_video_videoid` (`relatedvideoid`),
+  CONSTRAINT `FK_videorelated_currentvideo_video_videoid` FOREIGN KEY (`currentvideoid`) REFERENCES `video` (`videoid`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FK_videorelated_relatedvideo_video_videoid` FOREIGN KEY (`relatedvideoid`) REFERENCES `video` (`videoid`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `videorelated`
+--
+
+LOCK TABLES `videorelated` WRITE;
+/*!40000 ALTER TABLE `videorelated` DISABLE KEYS */;
+/*!40000 ALTER TABLE `videorelated` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `watch`
+--
+
+DROP TABLE IF EXISTS `watch`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `watch` (
+  `userid` int(11) NOT NULL DEFAULT '0',
+  `videoid` int(11) NOT NULL DEFAULT '0',
+  `time` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`userid`,`videoid`),
+  KEY `FK_watch_video_videoid` (`videoid`),
+  KEY `FK_watch_user_userid` (`userid`),
+  CONSTRAINT `FK_watch_user_userid` FOREIGN KEY (`userid`) REFERENCES `user` (`userid`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FK_watch_video_videoid` FOREIGN KEY (`videoid`) REFERENCES `video` (`videoid`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `watch`
+--
+
+LOCK TABLES `watch` WRITE;
+/*!40000 ALTER TABLE `watch` DISABLE KEYS */;
+/*!40000 ALTER TABLE `watch` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2010-02-18 20:49:15

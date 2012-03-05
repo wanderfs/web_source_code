@@ -1,0 +1,107 @@
+<%@ page pageEncoding="UTF-8" %>
+<div id="top">
+    <a id="logo" href="index.jsp"></a>
+    <div id="newmenudo">
+        <div id="capright" class="menudo_image"></div>
+        <ul id="nav" class="grandpappy">
+            <li class="firstborn search  " id="menudo_search_subtier">
+                <div class="rounded_input">
+                    <div class="contain menudo_image">
+                        <form  method="get" class="login_needed">
+                            <input name="menudo_search_field" id="menudo_search_field" value="搜索人或视频" class="field" autocomplete="off" maxlength="50"
+                                   type="text" />
+                            <input value="" class="searchbtn button" type="submit" />
+                        </form>
+                    </div>
+                </div>
+                <!--<ul class="login_needed dotted favoritechild menudo_subtier">
+                    <li id="menudo_search_videos" class="first selected">
+                        <a href="#nogo">搜索视频</a>
+                        <div class="left_shoulder menudo_image"></div>
+                        <div class="right_shoulder menudo_image"></div>
+                    </li>
+                    <li id="menudo_search_people" class=""><a href="#nogo">搜索用户</a></li>
+
+                    <li id="menudo_search_groups" class="last"><a href="#nogo">搜索专辑</a></li>
+
+                    <li style="margin-top: 0px; background: none repeat scroll 0% 0%
+                        transparent;">
+                        <div class="cheek_left menudo_image"></div>
+                        <div class="cheek_fill"></div>
+                        <div class="cheek_right menudo_image"></div>
+                    </li>
+                </ul> -->
+            </li>
+            <li class="firstborn feedback  ">
+                <a target="_blank" href="http://www.askform.cn/96374-126152.aspx" class="label" >用户调查</a>
+
+            </li>
+            <li class="firstborn help">
+                <a href="help.jsp" class="label" >帮助</a>
+                <ul class="favoritechild dotted">
+                    <li class="first">
+                        <a href="help.jsp#title_1">爱微视的那些事儿</a>
+                        <div class="left_shoulder menudo_image"></div>
+                        <div class="right_shoulder menudo_image"></div>
+                    </li>
+                    <li>
+                        <a href="help.jsp#title_2">爱微视帮助(FAQ)</a>
+                    </li>
+                    <li class="last">
+                        <a href="help.jsp#title_3">更多帮助</a>
+                    </li>
+
+                    <li style="margin-top: 0px; background: none repeat scroll 0% 0%
+                        transparent;">
+                        <div class="cheek_left menudo_image"></div>
+                        <div class="cheek_fill"></div>
+                        <div class="cheek_right menudo_image"></div>
+                    </li>
+                </ul>
+            </li>
+
+
+            <li class="firstborn me  " id="menudo_me">
+
+                <ul class="dotted  favoritechild">
+                    <li class="first login_needed">
+                        <a href="#nogo" class="login_needed">主页</a>
+                        <div class="left_shoulder menudo_image"></div>
+                        <div class="right_shoulder menudo_image"></div>
+                    </li>
+
+                    <li class="login_needed"><a href="notready.jsp" class="login_needed">专辑</a></li>
+                    <li class="login_needed"><a href="attention_and_fans_enter.jsp" class="login_needed">友邻</a></li>
+                    <li class="login_needed"><a href="user_settings.jsp" class="login_needed">设置</a></li>
+                    <li class="last danger login_needed">
+                        <a href="#nogo" class="login_needed">登录</a>
+                    </li>
+
+                    <li style="margin-top: 0px; background: none repeat scroll 0% 0%
+                        transparent; position: relative;">
+
+                        <div class="cheek_left menudo_image"></div>
+                        <div class="cheek_fill"></div>
+                        <div class="cheek_right menudo_image"></div>
+                    </li>
+                </ul>
+
+                <a href="#nogo" class="login_needed"><img
+                        src="pic/portrait/d.24.jpg" id="menudo_portrait" alt="" ></a>
+                <div class="runt">
+                    <a href="#nogo" class="label login_needed">用户</a>
+                </div>
+
+            </li>
+            <li class="firstborn login">
+                <a class="label login_needed" href="#nogo" rel="nofollow">登录</a>
+            </li>
+            <li class="firstborn join">
+                <a  href="#nogo" class="join_needed" title="加入 爱微视"><div class="joinimage loggedout"><span>注册</span><strong> 爱微视</strong></div></a>
+            </li>
+            <div class="clear"></div>
+        </ul>
+        <div class="clear"></div>
+    </div>
+
+</div>

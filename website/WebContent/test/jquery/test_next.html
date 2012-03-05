@@ -1,0 +1,35 @@
+<!--
+this example shows $.next() only selects the direct-next element.
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" xmlns:v="urn:schemas-microsoft-com:vml">
+  <head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            alert($("#li1").nextAll(".lix").text());
+            var new_li = $("#li1").clone(true).attr("id", "li0");
+            //$("#li1").prepend(new_li);
+            new_li.insertBefore($("#li1"));
+        });
+    </script>
+  </head>
+  <body>
+      <textarea id="tt">ttttt</textarea>
+      <div id="target">hahaha!</div>
+      <ul id="ulul">
+          <li id="li1">11111111111111</li>
+          <li>22222222222222</li>
+          <li class="lix">33333333333333</li>
+          <li class="lix">44444444444444</li>
+      </ul>
+
+      <ul>
+          <li id="hot_tab">hot_tab</li>
+      </ul>
+  </body>
+  
+</html>

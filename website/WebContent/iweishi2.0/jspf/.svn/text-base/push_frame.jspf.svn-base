@@ -1,0 +1,58 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+
+<div class="push_frame" id="push_frame_ok">
+    <div class="push_frame_detail">
+        <!--<div class="delete">
+            <a href="#nogo"></a>
+        </div>-->
+        <div class="video_pic">
+            <a href="#nogo">
+                <img height="90px" width="120px" alt="video pic" src="http://g4.ykimg.com/0100641F464D563ACBDB3D00DE5A4D1C305057-892B-51D7-6367-5D835893593D"/>
+            </a>
+        </div>
+        <div class="video_des">
+            <div class="vtitle">
+                <a href="video.jsp?vid=24174" target="_blank">110212 SPL 1011赛季 Zero(Z) vs Stork(P) 07</a>
+            </div>
+            <div>
+                <span>发现者</span>
+                <a href="home.jsp?uid=31" target="_blank"><strong>大老虎</strong></a>
+                <span class="time">&nbsp;&nbsp;2011-02-14 19:03:33.0</span>
+            </div>
+            <div class="description"><textarea class="pushbtn_usertalk" id="pushbtn_usertalk" cols="" rows="" ></textarea></div>
+            <!--<div>
+                <div class="play_count_img"></div>
+                <div class="float_left" id="push_ok_watch">观看(12)</div>
+                <div class="share_count_img"></div>
+                <div class="float_left" id="push_ok_share">分享(13)</div>
+                <div class="clear"></div>
+            </div>-->
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="collect">
+        <span id="collect_text">您将是此视频的发现者</span>
+        <div class="collect_btn float_right"><a href="#nogo"></a></div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<div class="push_frame_error" id="push_frame_error">
+    <div class="pf_innerwrap">
+        <!--<div class="delete">
+            <a href="#nogo"></a>
+        </div>-->
+        <div class="sorry_img float_left"></div>
+        <div class="error_sorry float_left">万分抱歉，你输入的不是有效的网址或者我们尚未支持！</div>
+        <div class="error_feedback float_left">支持的网站有：优酷，土豆，cntv，酷6，我乐，六间房，新浪视频...</div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<div id="push_frame_loading">
+    <div  class="loadingbox">
+    <div class="loadingpic"></div>
+    <div class="loadingw float_left">分析中...</div>
+    </div>
+</div>

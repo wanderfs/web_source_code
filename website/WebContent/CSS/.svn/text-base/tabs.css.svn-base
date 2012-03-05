@@ -1,0 +1,82 @@
+@charset "utf-8";
+/* CSS Document */
+.tabs ul li.active{
+	*background-color: #e6e6dc;
+}
+.tabs ul li{
+	float: left;
+	margin-right:5px;
+	cursor: pointer;
+	*background-color: #F4F4EE;
+}
+.tabs ul li.active .tableft_tl{
+	background-image:url(../pic/activetabsoftcorner.png);
+}
+.tabs ul li.active .tabright_tr{
+	background-image:url(../pic/activetabsoftcorner.png);
+}
+.tabs ul li .tableft{
+	width: 10px;
+	float: left;
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+}
+.tabs ul li .tableft_tl{
+	background-image: url(../pic/tabsoftcorner.png);
+	width: 10px;
+	height: 10px;
+	font-size: 0px;
+	}
+	.tabs ul li .tabright_tr{
+		background-position: 10px 0px;
+	background-image: url(../pic/tabsoftcorner.png);
+	width: 10px;
+	height: 10px;
+	font-size: 0px;
+	}
+.tabs ul li .tabright{
+	width: 10px;
+	float: left;
+	background-repeat: no-repeat;
+
+}
+.tabs ul li .tab{
+	
+	-webkit-border-top-left-radius:10px;
+	-webkit-border-top-right-radius:10px;
+	-moz-border-radius-topleft:10px;
+	-moz-border-radius-topright:10px;
+	font: normal 18px Arial,sans-serif;
+	color:#2b88c2;
+	padding:8px 32px 5px 33px;
+	
+	*padding:8px 22px 5px 23px;
+	background-color: rgb(244, 244, 238);
+	*float: left;
+}
+ .tabs ul li.active .tab{background-color:#e6e6dc !important;color:#3e3e3e;}
+.roundrect_tab_4 {
+	position: absolute;
+	height: 16px;
+	width: 136px;
+	top: 12px;
+}
+.roundrect_tab_5 {
+	position: absolute;
+	height: 16px;
+	width: 154px;
+	top: 12px;
+}
+.roundrect_tab_6 {
+	position: absolute;
+	height: 16px;
+	width: 172px;
+	top: 12px;
+}
+.roundrect_tab_3{
+	height: 16px;
+	width: 118px;
+	position: absolute;
+	top: 12px;
+}

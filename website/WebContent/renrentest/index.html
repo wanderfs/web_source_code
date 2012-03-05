@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:xn="http:///www.renren.com/2009/xnml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Renren Connect</title>
+        <script type="text/javascript">
+            function renderFriendList(fListNode, fArray) {
+                for (var i = 0; i < fArray.length; i++) {
+                    var friend = fArray[i];
+                    var friendDiv = document.createElement('div');
+                    friendDiv.className = 'a_friend';
+                    var markup = '';
+                    markup += '<div class=\"friend_pic\"><a href=\"http://renren.com/profile.do?id=' + friend.uid + '\">';
+                    markup += '<img src=\"' + friend.tinyurl + '\"/>';
+                    markup += '</a></div>';
+                    markup += '<div class=\"friend_name\"><a href=\"http://renren.com/profile.do?id=' + friend.uid + '\">';
+                    markup += friend.name + '</a></div><br/>';
+                    friendDiv.innerHTML = markup;
+                    fListNode.appendChild(friendDiv);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <xn:login-button autologoutlink="true"></xn:login-button>
+        <br />
+        <br />
+        Welcome <xn:name uid="loggedinuser"></xn:name>       <br />
+        <br />
+        <xn:profile-pic uid="loggedinuser" size="normal" linked="true" connect-logo="true"></xn:profile-pic>
+        <div id ="friends_container">
+            Friends List: (who has connected to this website:) <br  />
+        </div>
+        <script type="text/javascript" src="http://static.connect.renren.com/js/v1.0/FeatureLoader.jsp"></script>
+        <script type="text/javascript">
+            XN_RequireFeatures(["EXNML"], function()
+            {
+                XN.Main.init("21f64fe81ad84f6b8673529b0dc9a34b", "/website/renrentest/xd_receiver.html");
+                XN.Main.get_sessionState().waitUntilReady(function() {
+                    XN.Main.apiClient.friends_getAppFriends(["uid", "name", "tinyurl_with_logo"], function (result, ex) {
+                        var friendsContainer = document.getElementById("friends_container");
+                        if (!ex) {
+                            renderFriendList(friendsContainer, result);
+                        }
+                        else {
+                            friendsContainer.innerHTML = "error"                                                                                  }
+                    });
+                });
+            });
+        </script>
+        <a href="/website/renrentest/list.do"> list using servelet</a>
+        <xn:share-button type="button_count" confirm="alert('分享成功');" cancel="alert('用户取消了');">
+           <input type="hidden" name="medium"       value="video"/>
+           <input type="hidden" name="title"        value="仙剑奇侠传三"/>
+           <input type="hidden" name="link"   value="http://hd.tudou.com/program/16742/"/>
+           <input type="hidden" name="image_src"    value="http://i01.img.tudou.com/data/imgs/i/021/171/075/p.jpg"/>
+           <input type="hidden" name="video_src"    value="http://www.tudou.com/v/uGV8409kesY"/>
+           <input type="hidden" name="message"      value="嗯，这个视频很有意思"/>
+           <input type="hidden" name="video_type"   value="application/x-shockwave-flash"/>
+       </xn:share-button>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<%@ page pageEncoding="UTF-8" %>
+<div id="th_d_top">
+    <div id="th_d_top_bar">
+        <ul>
+            <li class="float_left">
+                <a id="second_logo" title="返回首页" href="user_index.jsp"></a>
+            </li>
+            <li class="float_left page_name_li"><div class="page_name_left float_left"></div><div class="page_name float_left fontsize24"><%=host.getName()%></div><div class="page_name_text fontsize18 float_left">的页面</div><div class="page_name_right float_left"></div><div class="clear"></div></li>
+            <li id="th_d_search_bar" class="float_left">
+                <a class="work_tag" href="user_index.jsp">首页</a>
+                <a class="work_tag" href="filer.jsp">筛视频</a>
+                <div class="unwork_tag">
+                <span>秀达人</span>
+                </div>
+                <div class="unwork_tag">
+                <span>爱专辑</span>
+                </div>
+                <div class="unwork_tag">
+                <span>团活动</span>
+                </div>
+            <div class="clear"></div>
+            </li>
+            <div class="clear"></div>
+        </ul>
+    </div>
+    <div class="clear"></div>
+</div>

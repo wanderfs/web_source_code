@@ -1,0 +1,104 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.join_login_tabs ul li{
+	cursor: pointer;
+	float: left;
+	margin-right: 5px;
+}
+.join_login_tabs ul li .tab{
+	font: normal 14px Arial,sans-serif;
+	color:#2b88c2;
+	padding:8px 32px 5px 33px;
+	background-color: rgb(244, 244, 238);
+	-moz-border-radius-topleft:
+ 10px;
+	-moz-border-radius-topright: 10px;
+
+
+
+
+	*padding-top: 0px;
+	*position:relative;
+	*z-index:1;
+}
+.join_login_tabs ul li.active .tab{
+	background-color:#e6e6dc !important;
+	color:#3e3e3e;
+}
+#join_login_content_wrapper {
+	background-color: rgb(230, 230, 220);
+	-moz-border-radius-topright: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	padding: 10px 10px 10px 30px;
+	*position: relative;
+	*top: -10px;
+}
+#register {
+	display: none;
+}
+#loginForm ul li {
+	padding: 10px 0px 0px 10px;
+}
+#loginForm ul .password {
+	margin-left: 7px;
+}
+.roundrect_tab_2{
+	position: absolute;
+	height: 16px;
+	width: 92px;
+	top: 52px;
+}
+.input-text {
+	-moz-border-radius: 5px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-color: #fff;
+}
+
+#form div.label{padding:0 0 6px 5px;width:227px;font:11px verdana,sans-serif;color:#445135;}
+#form div.rounded_input{margin-bottom:10px;width:232px;height:38px;}
+#form div.rounded_input input{display:block;padding:10px 10px 10px 10px;width:212px;height:18px;font:14px arial,sans-serif;color:#445135;border:0;-moz-border-radius: 11px;
+	
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-top-color: #FFF;
+	border-right-color: #FFF;
+	border-bottom-color: #FFF;
+	border-left-color: #FFF;
+	}
+#form .button{
+	float:left;
+	margin:0 10px 0 5px;
+	padding:2px 15px;
+	font:11px verdana,sans-serif;
+	color:#fff;
+	vertical-align:top;
+	cursor:pointer;
+	border:1px solid #408bb6;
+	background:#59a5d1;
+}
+div.forgot{
+	float:left;
+	padding:0;
+	width:160px;*width:148px;
+	line-height:16px;
+	padding-top:3px;
+}div.forgot a{line-height:0;font:normal 11px verdana,sans-serif;color:#106589;text-decoration:none;border-bottom:1px dotted #4095b9;}div.forgot a:hover{color:#fff;border-bottom:1px dotted #fff;}
+#form div.remember{
+	width:232px;
+	height:28px;
+}
+.join_login_tabs ul {
+
+}

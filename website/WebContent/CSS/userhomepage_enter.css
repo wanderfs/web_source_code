@@ -1,0 +1,165 @@
+@charset "utf-8";
+/* CSS Document */
+
+#header{*z-index:2;
+        position:relative;
+        margin: 0px 20px 10px 20px;
+        height:150px;
+}#header img.portrait{position:absolute;}#header .rightside{
+    margin-left:170px;
+}#header .title{
+    font:bold 36px/36px arial,sans-serif;
+    color: #3e3e3e;
+}#header .byline{color:#929388;font: normal 18px/18px arial,sans-serif;margin:5px 0 0 0;}#header .byline .staff_graphic,#header .byline .plus_graphic{padding:0 0 2px 0;}#header .date{
+    color:#97a500;
+    font: normal 12px verdana,serif;
+    margin-top:2px;
+    cursor:default;
+}
+
+.personal {
+    padding-left: 170px;
+}
+.id {
+    font: bold 14px arial,sans-serif;
+}
+.id_email {
+    font: 12px arial,sans-serif;
+    margin-top: 3px;
+}
+
+#bio{
+    color:#666;
+    font: normal 13px arial,sans-serif;
+    overflow:hidden;
+    margin-top: 20px;
+}
+.portrait_area {
+    height: 149px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.profile_activity{
+    margin:5px 0 5px 0;
+}.profile_activity li{
+    margin:0;
+    padding:7px 0;
+}.profile_activity li.first{background: none;}.profile_activity li.last {background: none;padding-top:0;}.profile_activity li div.digest{float: left;width:200px;}.profile_activity li img.portrait{float: right;margin-right:8px;width:40px;}.profile_activity li img.thumbnail{
+    float: left;
+    margin:0 8px;
+    width:30px;
+    height: 30px;
+}.profile_activity li div.caption{padding:6px;margin-top:8px;}.profile_activity li div.caption div.insides{font-size:10px;}.profile_activity h2{float: left;padding-bottom:10px;font-family:arial,sans-serif;font-size:24px;font-weight: normal;padding:0px 10px 15px 10px;}.profile_activity p.comment{color:#3e3e3e;font: normal 10px verdana,sans-serif;line-height:14px;margin-top:5px;word-wrap:break-word;}.profile_activity div.activity_tags{color:#3e3e3e;font: normal 10px verdana,sans-serif;line-height:14px;margin-top:5px;}
+.profile_contacts{
+    margin:10px 0 0 0;
+    height:1%;
+}.profile_contacts ul li{
+    display:block;
+    float: left;
+    margin:0 5px 10px 0;
+    _margin:0 4px 10px 0;
+    padding:0;
+    overflow: hidden;
+    width: 70px;
+}.profile_contacts ul li img {
+    display: block;
+    margin: 0 auto;
+}
+.profile_contacts ul li a {
+    width: 70px;
+    overflow: hidden;
+    display: block;
+    font-size: 12px;
+    text-align: center;
+    white-space:nowrap;
+    height: 65px;
+}
+.all{margin-top:5px;}
+table#topics div.bgcolor1, table#topics div.bgcolor2, div.nippleBox div.bar div.content {
+    color:#969696;
+}
+div.toolbar_item{
+    text-align:center;
+    color:#969696;
+    font:12px verdana,sans-serif;
+    cursor: pointer;
+    padding-left:20px;
+    float: right;
+}div.toolbar_item a{color:#969696 !important;}div.toolbar_item a:hover{color:#f75342 !important;}div.toolbar_item img{margin:0 0 2px 0;}
+div.toolbar_item a #toolbar_smiley{
+    width:38px;
+    background-position: -150px 0;
+    margin-left:0px;
+}div.toolbar_item a:hover #toolbar_smiley{background-position: -150px -100px;}div.toolbar_item a #toolbar_smiley_selected{
+    width:38px;
+    background-position: -150px -50px;
+    margin-left:5px;
+}
+.toobar{margin:0 15px;padding:10px 0px 0px 0px;*padding: 0px 0px 10px 0px;height:26px;*background: #E6E6DC;}
+.toobar span.show{font:bold 12px verdana,serif;float: left;padding-top:6px;margin-right:10px;}
+.toobar div.dropdown{float: left;position: relative;width:168px;margin:0 10px 0 0;}
+div.dropdown {
+
+    background:url("../pic/browser_dropdown_bg.gif") no-repeat scroll right top #FFFFFF;
+    border:3px solid #CFCEC3;
+    color:#2786C2;
+    cursor:pointer;
+    height:12px;
+    *height:14px;
+    line-height:12px;
+    *line-height:14px;
+    margin:0 20px 10px;
+    overflow:hidden;
+    padding:4px;
+    *padding:4px 4px 2px 4px;
+}
+div.dropdown div.value {
+    height:13px;
+    margin-right:20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    *width:148px;
+}
+div.dropdown * {
+    cursor:pointer;
+}
+.dropdown_items {
+    position:absolute;
+    left:76px;
+    *left:92px;
+    top:91px;
+    *top:357px;
+    width:176px;
+    z-index:8888;
+    border-color:#CFCEC3;
+    border-right:3px solid #CFCEC3;
+    border-style:none solid solid;
+    border-width:0 3px 3px;
+    cursor:pointer;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .dropdown_items {left: 77px;}
+}
+.ulDropdown{
+    background: #FFFFFF;
+}
+.dropdown_items ul li.hilite, .dropdown_items ul li.selected {
+    background-color:#E5F2F6;
+}
+.dropdown_items ul li {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color:#2786C2;
+    font-size:12px;
+    padding:5px 4px;
+    *height:1em;
+    *width:168px;
+}
+
+.toobar div.almond {
+    float:right;
+    font-size:12px;
+    line-height:24px;
+}

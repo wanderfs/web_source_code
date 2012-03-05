@@ -1,0 +1,116 @@
+/* 
+    Document   : Join_Login2
+    Created on : 2010-4-21, 20:04:38
+    Author     : voenix
+    Description:
+       join and login in the sidebar
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+#world{
+	width:300px;
+}#world #sun{
+	width:300px;
+	height:34px;
+	*height:32px;
+	text-align:center;
+	background:url('../pic/world_sun300.gif') no-repeat top left;
+	*background:url('../pic/world_sun30032.gif') no-repeat top left;
+}#world #sun .nav{
+	padding-top:5px;
+	font:normal 12px verdana,sans-serif;
+	color:#4095b9;
+}#world #sun .nav a{
+	color:#106589;
+	border-bottom:1px dotted #4095b9;
+	font:normal 18px verdana,sans-serif;
+}#world #sun .nav a:hover{color:#fff;border-bottom:1px dotted #fff;}#world #sun .nav a.active{
+	font:normal 24px arial,sans-serif;
+	color:#2e3540;
+	border-bottom:0;
+}#world #sun img#closer{position:absolute;top:20px;right:20px;cursor:pointer;}#world #sky{
+	width:300px;
+	text-align:center;
+	background:#85caef url('../pic/world_sun_rays300.gif') no-repeat top left;
+}
+
+#world #sky form{position:relative;margin:0 auto;width:232px;text-align:left;}#world #sky form label{
+	display:block;
+	font:normal 12px verdana,sans-serif;
+	color:#445135;
+}#world #sky div.tos{margin-bottom:10px;font:normal 11px verdana,sans-serif;color:#445135;}#world #sky div.tos span.tos{display:block;float: right;width:205px;font: normal 10px verdana,sans-serif;margin:0 0 10px 0;}#world #sky div.tos a{color:#106589;border-bottom:1px dotted #4095b9;}#world #sky div.tos a:hover{color:#fff;border-bottom:1px dotted #fff;}#world #sky form .rounded_input{
+	float:none;
+	margin-bottom:10px;
+	width:232px;
+	height:38px;
+	background:url('../pic/world_input2.gif') no-repeat top left;
+}#world #sky form .rounded_input input{display:block;padding:10px 10px 10px 10px;width:212px;height:18px;font:14px arial,sans-serif;color:#445135;border:0;background:transparent;}#world #sky form a#forgot_link{
+	font:12px verdana,sans-serif;
+	color:#106589;
+	border-bottom:1px dotted #4095b9;
+}#world #sky form a#forgot_link:hover{
+	color:#fff;
+	border-bottom:1px dotted #fff;
+}.joinLoginButton{
+	display:block;
+	margin-left:55px;
+	padding-top:6px;
+	width:119px;
+	height:27px;
+	font:normal 12px verdana,sans-serif;
+	color:#fff;
+	text-align:center;
+	background:url('../pic/world_button.gif') no-repeat top left;
+	margin-top: 10px;
+	border-style: none;
+	padding-bottom: 8px;
+	cursor: pointer;
+}#world #land{
+	-moz-border-radius:0px 0px 10px 10px;
+	-webkit-border-radius: 0px 0px 10px 10px;
+	width:300px;
+height:70px;
+*height:62px;
+	
+	text-align:center;
+	background:url('../pic/world_land300.jpg') no-repeat top left;
+
+	*background:url('../pic/world_land30062.jpg') no-repeat top left;
+}#world #land p{margin:0 0 0 10px;padding:132px 0 5px 0;width:420px;white-space:nowrap;overflow:hidden;}#world #land p#error{font:bold 11px verdana,sans-serif;color:#fff;}#world #land p a{color:#fff;border-bottom:1px dotted #fff;}#world #land_bottom img{
+	display:block;
+	width:300px;
+	height:10px;
+}#world #plus_giftcode{margin:0 0 10px 0;}#world #plus_giftcode a{color:#fff;font:bold 11px verdana,sans-serif;text-decoration: none;padding-bottom:1px;border-bottom:1px dotted #fff;}#world #plus_area .hide{color:#fff;font: normal 10px verdana,sans-serif;}
+#join_link {
+	font-size: 21px;
+}
+#logotext {
+}
+#logo a #logotext {
+	color: #FFF;
+	font-weight: bold;
+	font-size: 38px;
+}
+
+#world #sky #login #remember_label {
+	display: inline;
+	margin: 0px 65px 0px 3px;
+}
+#world #sky #join #tos_lable {
+	display: inline;
+	margin: 0px 0px 0px 3px;
+}
+#world #sky #join #tos_lable a {
+	font:12px verdana,sans-serif;
+	color:#106589;
+	border-bottom:1px dotted #4095b9;
+}
+#world #sky #join #tos_lable a:hover{
+	color:#fff;
+	border-bottom:1px dotted #fff;
+}
+.renrenConnect{margin: 10px 0px 0px 60px;}

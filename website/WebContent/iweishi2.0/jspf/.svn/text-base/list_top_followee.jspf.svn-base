@@ -1,0 +1,20 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="lisettop"><span>达人推荐</span></div>
+<div class="lisetcont">
+    <ul>
+        <li class="hotpeople_info">收藏&nbsp;&nbsp;&nbsp;&nbsp;粉丝数</li>
+        <%
+                    List<Pair<IUser, Integer>> list = Global.getTopRecentFolloweeUser(-1, 10);
+                    Iterator<Pair<IUser, Integer>> it = list.iterator();
+                    while (it.hasNext()) {
+                        Pair<IUser, Integer> p = it.next();
+        %>
+        <li class="hotpeople_maging">
+            <a href="home.jsp?uid=<%= p.getKey().getUserid()%>" target="_blank" ><big class="hotpeople_img" style="background:url(<%= p.getKey().getPhotoMini()%>) no-repeat;"></big><big class="hotpeople_txt"><b><%= p.getKey().getName()%></b></big></a><big class="hotpeople_vnum"><%= p.getKey().getCollectedVideoNumber()%></big><big class="hotpeople_fnum"><%= p.getValue()%></big>
+        </li>
+        <% }%>
+        <li class="more"><a href="#">更多</a></li>
+    </ul>
+</div>
+<div class="rlisetfommtbg"></div>

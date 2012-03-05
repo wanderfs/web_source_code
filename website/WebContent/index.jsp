@@ -1,0 +1,12 @@
+<%--
+    Document   : index
+    Created on : Apr 2, 2010, 1:24:49 PM
+    Author     : sen
+    Modify     : xiaoxiao Apr 21,2010, 17:00 beijing
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+<%
+            response.sendRedirect("iweishi2.0/index.jsp");
+%>

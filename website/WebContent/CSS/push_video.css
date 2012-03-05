@@ -1,0 +1,62 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+
+#roundrect_push_video_input {
+	position: absolute;
+	left: 61px;
+	top: 21px;
+	width: 800px;
+	height: 31px;
+}
+
+#push_video_form {
+	-moz-border-radius:10px;
+	background-color: #e6e6dc;
+	color: #FFF;
+	height: 85px;*height: 80px;
+	*margin: 5px 5px;
+}
+#push_video_btn {
+	position: absolute;
+	background-color: #59A5D1;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #408BB6;
+	border-right-color: #408BB6;
+	border-bottom-color: #408BB6;
+	border-left-color: #408BB6;
+	color: #fff;
+	width: 130px;
+	left: 722px;
+	top: 57px;
+}
+#push_video_input {
+	-moz-border-radius: 11px;
+	width: 780px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-top-color: #FFF;
+	border-right-color: #FFF;
+	border-bottom-color: #FFF;
+	border-left-color: #FFF;
+	height: 30px;
+	position: relative;
+	left: 10px;
+}
+#roundrect_push_video_form {
+	height: 85px;
+	width: 940px;
+	position: absolute;
+	left: 20px;
+	top: 182px;
+}
+#push_video {
+	height: 85px;
+}

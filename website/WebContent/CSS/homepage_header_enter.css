@@ -1,0 +1,11 @@
+#header{*z-index:2;position:relative;color:#3e3e3e;padding:0 20px;}#header h1 {
+	color:#3e3e3e;
+	color:#3e3e3e;
+	font:36px arial,sans-serif;
+	font-weight:bold;
+	line-height:36px;
+	padding:0px 20px 0px 0px;
+	margin-bottom: 5px;
+}#header h1 strong{font-family:arial,sans-serif;font-weight:normal;}
+#header #intro{	background:url("../pic/phome_summary_bg.gif") repeat scroll 0 -1px transparent;
+position:relative;margin-top:10px;font:bold 18px/30px arial,sans-serif;color:#969696;}

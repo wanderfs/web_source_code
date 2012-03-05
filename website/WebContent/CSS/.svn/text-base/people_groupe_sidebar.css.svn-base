@@ -1,0 +1,22 @@
+.profile_contacts{
+	margin:10px 0 0 0;
+	height:1%;
+}.profile_contacts ul li{
+	display:block;
+	float: left;
+	margin:0 5px 10px 0;
+	padding:0;
+	overflow: hidden;
+	width: 70px;
+}.profile_contacts ul li img {
+	display: block;
+	margin: 0 auto;
+}
+.profile_contacts ul li a {
+	width: 70px;
+	overflow: hidden;
+	display: block;
+	font-size: 12px;
+	text-align: center;
+}
+.all{margin-top:5px;}

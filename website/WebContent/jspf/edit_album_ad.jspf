@@ -1,0 +1,45 @@
+﻿<%@page pageEncoding="UTF-8" %>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $("#newAlbumAd").live("click", function() {
+        $.colorbox({
+            opacity: 0.5,
+            inline: true,
+            href: "#dEditAlbumAdPopup"
+        });
+    });
+
+    $("input#albumAdButton").live("click", function(){
+        $.getJSON("updateAlbumAd",
+            {
+                aid:        $("li.album_item").filter(".selected").attr("id").substring(3),
+                adname:     $("input#albumAdName").val(),
+                adlink:     $("input#albumAdLink").val()
+            }, function(json) {
+                //alert(json.toString());
+                //alert(json.status);
+                if (json.status == "OK") {
+                    msgbox("广告已更新，请刷新页面。");
+                } else {
+                    msgbox("发生未知错误，请联系爱微视，工作人员会立即为您解决。");
+                }
+            }
+        );
+    });
+});
+</script>
+
+<div id="dEditAlbumAdPopup" class="dEditAlbumAdPopup">
+    <div id="edit_album_ad">
+    <h1><span>专辑广告</span><img src="pic/icon_act_album.gif" alt="专辑广告"/></h1>
+    <div id="fEditAlbumAd" class="fEditAlbumAd" >
+        <h3>专辑广告语:</h3>
+        <input id="albumAdName" type="text"/>
+        <h3>专辑广告链接:</h3>
+        <input id="albumAdLink" type="text" value="http://"/>
+        <input id="albumAdButton" class="blue_button" type="button" value="新建"/>
+        <div class="clear"></div>
+    </div>
+    </div>    
+</div>

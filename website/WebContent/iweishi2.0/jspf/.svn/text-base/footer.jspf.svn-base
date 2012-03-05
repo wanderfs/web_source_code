@@ -1,0 +1,19 @@
+<%@page pageEncoding="UTF-8" %>
+<div id="bottom">
+    <div class="legal_container">
+        爱微视©2011 浙ICP备11013672
+        <a href="#nogo" id="about_us">关于我们</a> /
+        <a href="#nogo">近期更新</a> /
+        <a href="#nogo">站务合作</a> /
+        <a href="#nogo">招聘信息</a> /
+        <a href="#nogo">网站地图</a>
+    </div>
+    <div class="clear"></div>
+</div>
+
+<form id="share" target="_blank" action="http://www.jiathis.com/send/" style="display:none" method="get">
+    <input id="jia_webid" type="hidden" name="webid" value="renren"/>
+    <input id="jia_url" type="hidden" name="url" value="www.iweishi.cn"/>
+    <input id="jia_title"type="hidden" name="title" value="爱微视"/>
+    <input type="hidden" name="uid" value="909474"/>
+</form>

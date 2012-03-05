@@ -1,0 +1,82 @@
+<%@ page pageEncoding="UTF-8" %>
+
+<%
+String icode = request.getParameter("ic");
+if (icode != null)
+    request.getSession().setAttribute("icode", icode);
+else
+    icode = (String)request.getSession().getAttribute("icode");
+%>
+
+<div  id="loginbox">
+    <div id="world">
+        <div id="sun">
+
+            <div id="nav_login" class="nav" >
+                <a id="login_link" class="active" href="#nogo" >登录</a> 或 <a
+                    id="join_link" href="#nogo">注册</a>
+            </div>
+
+            <div id="nav_join" class="nav" style="display: none;">
+                <a  rel="nofollow" id="join_link"
+                    class="active">注册</a> 或 <a
+                    rel="nofollow" id="login_link" >登录</a>
+            </div>
+        </div>
+
+        <div id="sky">
+            <form id="login" action="login" method="post">
+                <label for="login_email">邮箱</label>
+                <div class="rounded_input"><input id="login_email" name="email" type="text"></div>
+
+                <label for="login_password">密码</label>
+                <div class="rounded_input">
+                    <input id="login_password" name="password" type="password">
+                </div>
+
+                <input type="checkbox" id="remember" name="autologin"/><label id="remember_label" for="remember">记住登陆状态</label> <a
+                    id="forgot_link" href="forget_password.jsp">忘记密码？</a>
+
+                <input id="login_button" class="joinLoginButton" type="submit" value="登录">
+                <!--<div class="renrenConnect">
+                    <div>&nbsp;或使用人人连接登录</div>
+                    <div class="renrenConectButton"><img alt="人人连接" src="pic/connect_light_large.png" /></div>
+                </div>-->
+                 
+            </form>
+
+            <form id="join" class="mask" action="join" method="post">
+                <label for="invite_code">邀请码 <br/>(尊敬的用户，为了保证服务质量，目前内测阶段需要邀请码注册，谢谢）</label>
+                <div class="rounded_input">
+                    <input id="invite_code" name="invite_code" type="text" value="<%=icode == null ? "" : icode%>">
+                </div>
+                <label for="join_email">注册邮箱</label>
+                <div class="rounded_input"><input id="join_email" name="email" type="text"></div>
+
+                <label for="join_password">密码</label>
+                <div class="rounded_input">
+                    <input id="join_password" name="password" type="password">
+                </div>
+                <label for="join_password_check">确认密码</label>
+                <div class="rounded_input">
+                    <input id="join_password_check" type="password">
+                </div>
+                
+                <input type="checkbox" id="tos" checked="true"/><label id="tos_lable" for="tos">我已经阅读并同意了 <a
+                        href="notready.jsp"         target="_blank">用户条例</a></label>
+
+                <input id="join_button" class="joinLoginButton" type="submit" value="注册">
+
+            </form>
+
+
+        </div>
+
+        <div id="land">
+
+        </div>
+
+        <!--[if gte IE 6]> <div id="land_bottom">
+			<img src="pic/world_land_bottom300.gif" alt="">
+		</div><![endif]-->
+    </div></div>

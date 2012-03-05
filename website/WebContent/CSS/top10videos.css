@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+#top_week_videos ul.top_week_videos_ul li{
+	border-top:1px dotted #bebabb;
+	position: relative;
+	width:300px;
+	margin-top: 5px;
+	padding-top: 5px;
+}
+#top_week_videos ul.top_week_videos_ul li.top_week_videos_topvideo{
+	border-style:none;
+	
+}
+
+.top_week_videos_thumbnail {
+        display: block;
+	float:left;
+	margin-right:5px;
+	background:url("../pic/26744652_48.jpg") no-repeat scroll center center transparent;
+	height:48px;
+	position:relative;
+	width:48px;
+}
+
+
+
+.top_week_videos_digest{
+	float:right;
+	overflow:hidden;
+	width: 225px;
+}
+.top_week_videos_top h3{font:bold 16px arial,sans-serif;}
+
+.top_week_videos_digg_count {
+	-moz-border-radius: 5px;
+	width: 47px;
+	text-align:center;
+	padding: 13px 0;
+	margin-bottom: 5px;
+	height: 21px;
+	background-color: #e6e6dc;
+}
+.top_week_videos_stat {
+	padding-top:3px;color:#999;line-height:16px;
+}
+.top_week_videos_comment {
+	margin-right:5px;
+}
+
+.top_week_videos_lineheight{line-height:18px;}
+.top_week_videos_digest h3{
+	font:bold 14px arial,sans-serif;
+}
+.top_week_videos_num {
+	float: left;
+	font-size: 21px;
+	width: 20px;
+}

@@ -1,0 +1,198 @@
+.top5_num {
+    float: left;
+    font-size: 21px;
+    width: 20px;
+    margin-right: 5px;
+}
+#top5_module ul.top5_ul li.top5_topvideo {
+    border-style: none;
+}
+#top5_module ul.top5_ul li {
+    border-top: 1px dotted #BEBABB;
+    margin-top: 5px;
+    padding-top: 5px;
+    position: relative;
+    width: 300px;
+}
+.top5_thumbnail {
+    background: url("../pic/portrait/d.48.jpg") no-repeat scroll center center transparent;
+    display: block;
+    float: left;
+    height: 48px;
+    margin-right: 5px;
+    position: relative;
+    width: 48px;
+}
+.top5_digest {
+    float: right;
+    overflow: hidden;
+    width: 218px;
+}
+.top5_digest h3 {
+    font: bold 14px arial,sans-serif;
+}
+.top5_stat {
+    color: #999999;
+    line-height: 16px;
+    padding-top: 3px;
+}
+
+
+.description_container {
+    margin: 10px 0 0;
+}
+#description {
+    font: 14px arial,helvetica,sans-serif;
+    padding: 0 20px 5px;
+}
+.comment_module {
+    margin: 0 0 0 20px;
+}
+.comments {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.comment_module .parent {
+    border-top: 1px dotted #BEBABB;
+}
+.comments li {
+    font: 12px/17px verdana,sans-serif;
+    margin: 0;
+    padding: 10px 0;
+}
+.comments li img.portrait {
+    float: left;
+}
+.portrait {
+    cursor: pointer;
+}
+.comments li div.rightside {
+    float: left;
+    margin-left: 10px;
+}
+.parent .rightside {
+    width: 505px;
+}
+.comments li div.name, .new_comment .isay {
+    color: #969696;
+    font: 12px/12px verdana,sans-serif;
+    margin: 0 0 5px;
+}
+.comments li div.name a {
+    font-size: 12px;
+    font-weight: bold;
+}
+.comments li div.text {
+    font: 12px/18px verdana,sans-serif;
+    margin: 5px 0 10px;
+}
+.new_comment {
+    border-top: 1px dotted #BEBABB;
+    padding-top: 10px;
+    width: 600px;
+}
+.new_comment .portrait {
+    float: left;
+    margin-right: 10px;
+}
+.comments li textarea, .new_comment textarea {
+    overflow: hidden;
+    width: 490px;
+}
+.comments li textarea, .comments li.reply textarea, .new_comment textarea {
+    border: 1px solid #EAEAEA;
+    font: 12px verdana,sans-serif;
+    height: 75px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+.new_comment textarea {
+    font-size: 12px;
+}
+input, textarea, select {
+    outline: 0 none;
+}
+.new_comment .blue_button {
+    float: right;
+    margin-right: 12px;
+}
+.blue_button {
+    background: none repeat scroll 0 0 #59A5D1;
+    border: 1px solid #408BB6;
+    color: #FFFFFF !important;
+    cursor: pointer;
+    font: 12px verdana,sans-serif;
+    padding: 2px 10px;
+    width: 130px;
+}
+
+
+div.clips_head {
+    background: url("../pic/sortbar_bg.gif") repeat scroll 0 0 transparent;
+    border: 1px solid #E4E4DE;
+    margin: 20px 0 20px;
+    padding: 10px;
+}
+div.clips_head span {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+.clips {
+    margin-top: 15px;
+    margin-left: 20px;
+}
+.clips ol {
+    float: left;
+}
+.clips ol li {
+    float: left;
+    margin: 20px 26px 0 0;
+    width: 125px;
+    *height: 126px;
+    _height: 130px;
+
+}
+.clips ol li.top {
+    margin-top: 0;
+}
+.clips ol li.end {
+    margin-right: 0;
+}
+.clips ol li.selected div.image {
+    border-color: #969696;
+    border-style: solid;
+    border-width: 5px;
+    height: 84px;
+    width: 115px;
+}
+.clips ol li div.image {
+    background: url("../pic/default.94x125.jpg") no-repeat scroll left top transparent;
+    cursor: pointer;
+    height: 94px;
+    *height: 96px;
+    width: 125px;
+}
+.clips ol li div.title {
+    margin-top: 2px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 125px;
+}
+.clips ol li div.title_top_first {
+    margin-top: 2px;
+    _margin-top: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 125px;
+}
+.clips ol li div.byline {
+    color: #444444;
+    font: 12px/13px arial,sans-serif; 
+    overflow: hidden;
+    padding-left: 1px;
+    white-space: nowrap;
+    width: 125px;
+}
